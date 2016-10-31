@@ -1,18 +1,12 @@
-## Use a MySQL database in a Spring Boot Web Application through Hibernate
-
-See here for more informations: 
-http://blog.netgloo.com/2014/08/17/use-mysql-database-in-a-spring-boot-web-application-through-hibernate/
-
 ### Usage
 
 - Run the application and go on http://localhost:8080/
 - Use the following urls to invoke controllers methods and see the interactions
   with the database:
-    * `/user/save?email=[email]&name=[name]`: create a new user with an 
-      auto-generated id and email and name as passed values.
-    * `/user/delete?id=[id]`: delete the user with the passed id.
-    * `/user/get-by-email?email=[email]`: retrieve the id for the user with the
-      passed email address.
+    * `/user/create?email=[email]&name=[name]&balance=[balance]`: create a new user with an 
+      auto-generated id and email, name and balance as passed values.
+    * `/user/updateBalance?id=[id]&balance=[balance]`: Update balance of user with the passed id and balance.
+    * `/user/transferBalance?fromID=[fromID]&toID=[toID]&balance=[balance]`: transfer money with fromID, toID and balance.
 
 ### Build and run
 
@@ -23,7 +17,7 @@ database connection.
 
 #### Prerequisites
 
-- Java 7
+- Java 8
 - Maven 3
 
 #### From terminal
